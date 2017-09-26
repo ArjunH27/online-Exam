@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
+using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -37,7 +38,8 @@ namespace OnlineExam
                     {
                         Session["user"] = dataReader["name"].ToString().TrimEnd();
                         Session["userid"] = dataReader["username"].ToString().TrimEnd();
-                       Response.Redirect("home.aspx");
+                        //Response.Redirect("home.aspx");
+                        FormsAuthentication.RedirectFromLoginPage(lname, true);
                     }
                     else
                     {

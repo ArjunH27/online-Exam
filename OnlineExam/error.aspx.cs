@@ -16,7 +16,7 @@ namespace OnlineExam
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            Response.Redirect("login.aspx");
+            Response.Redirect("index/login.aspx");
         }
     }
 }

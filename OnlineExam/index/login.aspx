@@ -75,7 +75,6 @@
     
     
 </body>
-<script src="scripts/jquery-1.9.1.js"></script>
+<script src="../scripts/jquery-1.9.1.js"></script>
 
 </html>
-<

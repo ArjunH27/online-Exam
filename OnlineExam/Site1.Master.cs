@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -25,7 +26,10 @@ namespace OnlineExam
         {
 
             Session.Abandon();
-            Response.Redirect("login.aspx");
+            Session.Clear();
+            FormsAuthentication.SignOut();
+            FormsAuthentication.RedirectToLoginPage();
+         
 
         }
     }
