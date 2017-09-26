@@ -1,0 +1,46 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="OnlineExam.Site1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+        #i1{
+            margin-left:80px;
+            color:white;
+        }
+        .btn{
+            margin-left:700px;
+        }
+        body{
+            background-image:url('https://wallpaperscraft.com/image/line_light_background_bright_43975_2560x1600.jpg');
+        }
+    </style>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    
+    <form id="form1" runat="server">
+ <nav class="navbar navbar-toggleable-md navbar-inverse ">
+    
+    
+  <a class="navbar-brand" id="i1" href="#">ONLINE EXAM</a>
+  <a class="navbar-brand" id="i1" href="#">USER : 
+     <asp:Label ID="Label1" runat="server"></asp:Label>
+     </a>
+     <asp:Button ID="Button1" CssClass="btn" runat="server" Text="LOGOUT" OnClick="Button1_Click" />
+  
+</nav>
+    <br /><br />
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+<script src="scripts/jquery-1.9.1.js"></script>
+</html>
