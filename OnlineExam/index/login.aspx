@@ -10,6 +10,7 @@
             .wrapper {	
 	margin-top: 80px;
   margin-bottom: 80px;
+  margin-left:300px;
   float:left;
                 width: 1255px;
             }
@@ -17,15 +18,20 @@
             .form1 {
                 max-width: 380px;
                 padding: 15px 35px 45px;
-                margin: 0 auto;
-                background-color: #64DEFD;
-                
+                margin: 0 auto;          
                 border: 1px solid rgba(0,0,0,0.1);
                 align-content:center;
+                 
+                 background-image:url("https://cdn.wallpapersafari.com/48/7/PZLcAf.jpg");
+                 
+            }
+            .btn:hover{
+                cursor:pointer;
+            
             }
             body{
                 
-                background-image:url("http://news.efinancialcareers.com/wp-content/uploads/2012/08/exam_multiplechoice.jpg");
+                background-image:url("https://wallpaper.wiki/wp-content/uploads/2017/04/wallpaper.wiki-Desktop-Best-And-Website-background-2560x1600-PIC-WPD0012553.jpg");
                 
                  }
           
@@ -59,7 +65,7 @@
         <br />
         
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="Button1" runat="server" Text="LOGIN" Width="130px" OnClick="Button1_Click" />
+        <asp:Button ID="Button1" runat="server" Text="LOGIN" Width="130px" OnClick="Button1_Click" BackColor="#33CCFF" CssClass="btn" />
         <br />
         
         <br />

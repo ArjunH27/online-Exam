@@ -17,6 +17,7 @@ namespace OnlineExam
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+            try { 
             var name = TextBox1.Text;
             var uname = TextBox2.Text;
             var password = TextBox3.Text;
@@ -38,7 +39,11 @@ namespace OnlineExam
                 Response.Redirect("login.aspx");
             }
             con.Close();
-         }
+         }catch(Exception)
+            {
+                Response.Redirect("~/error.aspx");
+            }
+    }
 
     }
 

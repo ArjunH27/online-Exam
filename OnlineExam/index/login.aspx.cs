@@ -20,6 +20,8 @@ namespace OnlineExam
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+            try
+            { 
             var lname = TextBox1.Text;
             var lpass = TextBox2.Text;
 
@@ -52,7 +54,11 @@ namespace OnlineExam
                 Response.Write("<script>alert('Invalid Username')</script>");
             }
             con.Close();
-        }
+        }catch(Exception )
+            {
+                Response.Redirect("~/error.aspx");
+            }
+    }
 
         protected void Button2_Click(object sender, EventArgs e)
         {

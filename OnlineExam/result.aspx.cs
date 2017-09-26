@@ -12,7 +12,7 @@ namespace OnlineExam
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            try { 
             SqlConnection con = new SqlConnection("Data Source = SUYPC177; Initial Catalog = OnlineExam; User ID = sa; Password = Suyati123;Integrated Security=False");
             SqlCommand cmd1 = new SqlCommand("select * from Test where username='" + Session["userid"].ToString() + "'", con);
             con.Open();
@@ -154,13 +154,14 @@ namespace OnlineExam
                 }
             else
             {
-                Response.Write("<script>alert('NO Results Found' )</script>");
-               
-               // Response.Redirect("home.aspx");
-               
+                Response.Write("<script>alert('NO Results Found' )</script>");        
             }
-            
 
+            }
+            catch (Exception)
+            {
+                Response.Redirect("error.aspx");
+            }
         }
 
         protected void Button1_Click(object sender, EventArgs e)

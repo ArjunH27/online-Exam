@@ -14,7 +14,7 @@ namespace OnlineExam
         public int count = 0;
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            try {    
             SqlConnection con = new SqlConnection("Data Source = SUYPC177; Initial Catalog = OnlineExam; User ID = sa; Password = Suyati123;Integrated Security=False");
             //q1
             SqlCommand cmd = new SqlCommand("select * from Question where questionID='" + "q1" + "'",con);
@@ -144,6 +144,11 @@ namespace OnlineExam
                 MultiView1.ActiveViewIndex = 0;
             }
 
+            }
+            catch (Exception)
+            {
+                Response.Redirect("error.aspx");
+            }
         }
         protected void Next_Click(object sender, EventArgs e)
         {
@@ -167,6 +172,7 @@ namespace OnlineExam
 
         protected void Button19_Click(object sender, EventArgs e)
         {
+            try { 
             var ans1 = "Not Answered";
             if (RadioButton1.Checked)
             {
@@ -366,6 +372,11 @@ namespace OnlineExam
             cmd2.ExecuteNonQuery();
             con.Close();
             Response.Redirect("home.aspx");
-        }
+            }
+            catch (Exception)
+            {
+                Response.Redirect("error.aspx");
+            }
+       }
     }
 }
