@@ -18,8 +18,11 @@ namespace OnlineExam
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+            ///<summary>
+            ///Register Button
+            ///</summary>
             try { 
-            var name = TextBox1.Text;
+            var name = TextBox1.Text;      //user entered values
             var uname = TextBox2.Text;
             var password = TextBox3.Text;
             SqlConnection con = new SqlConnection("Data Source = SUYPC177; Initial Catalog = OnlineExam; User ID = sa; Password = Suyati123;Integrated Security=False");
@@ -27,7 +30,7 @@ namespace OnlineExam
             SqlCommand cmd1 = new SqlCommand("select password from login where username='" + uname + "'", con);
             SqlDataReader dataReader = cmd1.ExecuteReader();
 
-            if (dataReader.HasRows)
+            if (dataReader.HasRows) //checks if user already exist
             {
                 Response.Write("<script>alert('Username Already Exist' )</script>");
             }
@@ -37,7 +40,7 @@ namespace OnlineExam
                 SqlCommand cmd = new SqlCommand("insert into login values('" + name + "','" + uname + "','" + password + "')", con);
                 cmd.ExecuteNonQuery();
                 Response.Write("<script>alert('Registration Successfull' )</script>");
-                    FormsAuthentication.RedirectToLoginPage();
+                FormsAuthentication.RedirectToLoginPage(); //registration Successfull and redirected to login page
                 }
             con.Close();
          }catch(Exception)

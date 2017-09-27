@@ -16,7 +16,7 @@ namespace OnlineExam
         {
             try {    
             SqlConnection con = new SqlConnection("Data Source = SUYPC177; Initial Catalog = OnlineExam; User ID = sa; Password = Suyati123;Integrated Security=False");
-            //q1
+            //Displaying Question 1
             SqlCommand cmd = new SqlCommand("select * from Question where questionID='" + "q1" + "'",con);
             con.Open();
             SqlDataReader dataReader = cmd.ExecuteReader();
@@ -28,7 +28,8 @@ namespace OnlineExam
             RadioButton4.Text = dataReader["option4"].ToString();
             con.Close();
             dataReader.Close();
-            //q2
+
+            //Displaying Question 2
             SqlCommand cmd1 = new SqlCommand("select * from Question where questionID='" + "q2" + "'", con);
             con.Open();
             SqlDataReader dataReader1 = cmd1.ExecuteReader();
@@ -40,7 +41,8 @@ namespace OnlineExam
             RadioButton8.Text = dataReader1["option4"].ToString();
             con.Close();
             dataReader1.Close();
-            //q3
+            
+            //Displaying Question 3
             SqlCommand cmd2 = new SqlCommand("select * from Question where questionID='" + "q3" + "'", con);
             con.Open();
             SqlDataReader dataReader2 = cmd2.ExecuteReader();
@@ -52,7 +54,8 @@ namespace OnlineExam
             RadioButton12.Text = dataReader2["option4"].ToString();
             con.Close();
             dataReader2.Close();
-            //q4
+           
+            //Displaying Question 4
             SqlCommand cmd3 = new SqlCommand("select * from Question where questionID='" + "q4" + "'", con);
             con.Open();
             SqlDataReader dataReader3 = cmd3.ExecuteReader();
@@ -64,7 +67,8 @@ namespace OnlineExam
             RadioButton16.Text = dataReader3["option4"].ToString();
             con.Close();
             dataReader3.Close();
-            //q5
+
+            //Displaying Question 5
             SqlCommand cmd4 = new SqlCommand("select * from Question where questionID='" + "q5" + "'", con);
             con.Open();
             SqlDataReader dataReader4 = cmd4.ExecuteReader();
@@ -76,7 +80,8 @@ namespace OnlineExam
             RadioButton20.Text = dataReader4["option4"].ToString();
             con.Close();
             dataReader4.Close();
-            //q6
+
+            //Displaying Question 6
             SqlCommand cmd5 = new SqlCommand("select * from Question where questionID='" + "q6" + "'", con);
             con.Open();
             SqlDataReader dataReader5 = cmd5.ExecuteReader();
@@ -88,7 +93,8 @@ namespace OnlineExam
             RadioButton24.Text = dataReader5["option4"].ToString();
             con.Close();
             dataReader5.Close();
-            //q7
+
+            //Displaying Question 7
             SqlCommand cmd6 = new SqlCommand("select * from Question where questionID='" + "q7" + "'", con);
             con.Open();
             SqlDataReader dataReader6 = cmd6.ExecuteReader();
@@ -100,7 +106,8 @@ namespace OnlineExam
             RadioButton28.Text = dataReader6["option4"].ToString();
             con.Close();
             dataReader6.Close();
-            //q8
+
+            //Displaying Question 8
             SqlCommand cmd7 = new SqlCommand("select * from Question where questionID='" + "q8" + "'", con);
             con.Open();
             SqlDataReader dataReader7 = cmd7.ExecuteReader();
@@ -112,7 +119,8 @@ namespace OnlineExam
             RadioButton32.Text = dataReader7["option4"].ToString();
             con.Close();
             dataReader7.Close();
-            //q9
+
+            //Displaying Question 9
             SqlCommand cmd8 = new SqlCommand("select * from Question where questionID='" + "q9" + "'", con);
             con.Open();
             SqlDataReader dataReader8 = cmd8.ExecuteReader();
@@ -124,7 +132,8 @@ namespace OnlineExam
             RadioButton36.Text = dataReader8["option4"].ToString();
             con.Close();
             dataReader8.Close();
-            //q10
+
+            //Displaying Question 10
             SqlCommand cmd9 = new SqlCommand("select * from Question where questionID='" + "qlast" + "'", con);
             con.Open();
             SqlDataReader dataReader9 = cmd9.ExecuteReader();
@@ -150,8 +159,9 @@ namespace OnlineExam
                 Response.Redirect("error.aspx");
             }
         }
+
         protected void Next_Click(object sender, EventArgs e)
-        {
+        { //next button function
 
             int index = MultiView1.ActiveViewIndex;           
             
@@ -160,8 +170,9 @@ namespace OnlineExam
             
         }
 
+
         protected void Prev_Click(object sender, EventArgs e)
-        {
+        {//previous button function
             int index = MultiView1.ActiveViewIndex;
            
             
@@ -172,8 +183,12 @@ namespace OnlineExam
 
         protected void Button19_Click(object sender, EventArgs e)
         {
+            ///<summary>
+            ///Submit button
+            ///</summary>
             try
             {
+                //finding the selected option for Question 1
                 var ans1 = "Not Answered";
             if (RadioButton1.Checked)
             {
@@ -191,7 +206,7 @@ namespace OnlineExam
             {
                 ans1 = RadioButton4.Text;
             }
-
+                //finding the selected option for Question 2
             var ans2 = "Not Answered";
             if (RadioButton5.Checked)
             {
@@ -210,7 +225,7 @@ namespace OnlineExam
                 ans2 = RadioButton8.Text;
             }
 
-
+                //finding the selected option for Question 3
             var ans3 = "Not Answered";
             if (RadioButton9.Checked)
             {
@@ -228,7 +243,7 @@ namespace OnlineExam
             {
                 ans3 = RadioButton12.Text;
             }
-
+                //finding the selected option for Question 4
             var ans4 = "Not Answered";
             if (RadioButton13.Checked)
             {
@@ -247,7 +262,7 @@ namespace OnlineExam
                 ans4 = RadioButton16.Text;
             }
 
-
+                //finding the selected option for Question 5
             var ans5 = "Not Answered";
             if (RadioButton17.Checked)
             {
@@ -265,7 +280,7 @@ namespace OnlineExam
             {
                 ans5 = RadioButton20.Text;
             }
-
+                //finding the selected option for Question 6
             var ans6 = "Not Answered";
             if (RadioButton21.Checked)
             {
@@ -283,7 +298,7 @@ namespace OnlineExam
             {
                 ans6 = RadioButton24.Text;
             }
-
+                //finding the selected option for Question 7
             var ans7 = "Not Answered";
             if (RadioButton25.Checked)
             {
@@ -301,8 +316,8 @@ namespace OnlineExam
             {
                 ans7 = RadioButton28.Text;
             }
-
-            var ans8 = "Not Answered";
+                //finding the selected option for Question 8
+             var ans8 = "Not Answered";
             if (RadioButton29.Checked)
             {
                 ans8 = RadioButton29.Text;
@@ -319,7 +334,7 @@ namespace OnlineExam
             {
                 ans8 = RadioButton32.Text;
             }
-
+                //finding the selected option for Question 9
             var ans9 = "Not Answered";
             if (RadioButton33.Checked)
             {
@@ -338,7 +353,7 @@ namespace OnlineExam
                 ans9 = RadioButton36.Text;
             }
 
-
+                //finding the selected option for Question 10
             var ans10 = "Not Answered";
             if (RadioButton37.Checked)
             {
@@ -361,14 +376,15 @@ namespace OnlineExam
             SqlCommand cmd = new SqlCommand("select * from Test where username='" + Session["userid"].ToString() + "'", con);
             SqlDataReader dataReader = cmd.ExecuteReader();
             dataReader.Read();
-            if (dataReader.HasRows)
+            if (dataReader.HasRows) //checks if user has allready taken exam , if yes that result is removed  
             {
                 SqlCommand cmd1 = new SqlCommand("delete from Test where username='"+ Session["userid"].ToString()+"'", con);
                 dataReader.Close();
                     
                 cmd1.ExecuteNonQuery();
             }
-                SqlCommand cmd2 = new SqlCommand("insert into Test values('" + Session["userid"].ToString() + "','" + Session["user"].ToString() + "','" + ans1 + "','" + ans2 + "','" + ans3 + "','" + ans4 + "','" + ans5 + "','" + ans6 + "','" + ans7 + "','" + ans8 + "','" + ans9 + "','" + ans10 + "')", con);
+            //inserting the result to table
+            SqlCommand cmd2 = new SqlCommand("insert into Test values('" + Session["userid"].ToString() + "','" + Session["user"].ToString() + "','" + ans1 + "','" + ans2 + "','" + ans3 + "','" + ans4 + "','" + ans5 + "','" + ans6 + "','" + ans7 + "','" + ans8 + "','" + ans9 + "','" + ans10 + "')", con);
             dataReader.Close();
             cmd2.ExecuteNonQuery();
             con.Close();

@@ -23,7 +23,7 @@ namespace OnlineExam
         }
 
         protected void Button1_Click(object sender, EventArgs e)
-        {
+        { //signout button ,sessions are cleared and redirected to login page
 
             Session.Abandon();
             Session.Clear();

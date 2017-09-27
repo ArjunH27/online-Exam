@@ -20,28 +20,30 @@ namespace OnlineExam
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+            ///<summary>
+            ///Login Button
+            ///</summary>
             try
             { 
-            var lname = TextBox1.Text;
-            var lpass = TextBox2.Text;
+            var lname = TextBox1.Text;  //user entered username
+            var lpass = TextBox2.Text;  //user entered password
 
             SqlConnection con = new SqlConnection("Data Source = SUYPC177; Initial Catalog = OnlineExam; User ID = sa; Password = Suyati123;Integrated Security=False");
             SqlCommand cmd = new SqlCommand("select * from login where username='" + lname + "'", con);
             con.Open();
 
             SqlDataReader dataReader = cmd.ExecuteReader();
-            if (dataReader.HasRows)
+            if (dataReader.HasRows)  //checks if user Exist
             {
                 while (dataReader.Read())
                 {
                     var cpass = dataReader["password"].ToString().TrimEnd();
 
-                    if (cpass.Equals(lpass))
+                    if (cpass.Equals(lpass))  // checks password
                     {
                         Session["user"] = dataReader["name"].ToString().TrimEnd();
                         Session["userid"] = dataReader["username"].ToString().TrimEnd();
-                        //Response.Redirect("home.aspx");
-                        FormsAuthentication.RedirectFromLoginPage(lname, true);
+                        FormsAuthentication.RedirectFromLoginPage(lname, true); // login successfull and gets redirected
                     }
                     else
                     {
@@ -62,7 +64,7 @@ namespace OnlineExam
 
         protected void Button2_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Register.aspx");
+            Response.Redirect("Register.aspx"); //redirect to register page
         }
     }
 }

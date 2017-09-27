@@ -15,6 +15,7 @@
         .btn{
             margin-left:700px;
         }
+        
         body{
             background-image:url('https://wallpaperscraft.com/image/line_light_background_bright_43975_2560x1600.jpg');
         }
@@ -41,6 +42,7 @@
         </asp:ContentPlaceHolder>
     </div>
     </form>
+   
 </body>
 <script src="scripts/jquery-1.9.1.js"></script>
 </html>

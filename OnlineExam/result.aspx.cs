@@ -13,6 +13,7 @@ namespace OnlineExam
         protected void Page_Load(object sender, EventArgs e)
         {
             try { 
+                //getting the user entered options
             SqlConnection con = new SqlConnection("Data Source = SUYPC177; Initial Catalog = OnlineExam; User ID = sa; Password = Suyati123;Integrated Security=False");
             SqlCommand cmd1 = new SqlCommand("select * from Test where username='" + Session["userid"].ToString() + "'", con);
             con.Open();
@@ -34,7 +35,8 @@ namespace OnlineExam
                   
                 string[] a = new string[10];
                     int i = 0;
-           
+
+               //getting the correct options
                     SqlCommand cmd = new SqlCommand("select correct from Question", con);
             
                     SqlDataReader dataReader = cmd.ExecuteReader();
@@ -45,7 +47,7 @@ namespace OnlineExam
                     }
 
                     int j = 0;
-
+                    //comparing if the user entered and correct options are same ,if same background in green else background is red
                     c1.Text = a[0];
                      if(ans1.Text==c1.Text)
                     {
@@ -153,7 +155,7 @@ namespace OnlineExam
                     Label9.Text= j.ToString();
                 }
             else
-            {
+            { //if no reult is found for the user
                 Response.Write("<script>alert('NO Results Found' )</script>");        
             }
 
