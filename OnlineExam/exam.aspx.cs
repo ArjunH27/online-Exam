@@ -172,8 +172,9 @@ namespace OnlineExam
 
         protected void Button19_Click(object sender, EventArgs e)
         {
-            //try { 
-            var ans1 = "Not Answered";
+            try
+            {
+                var ans1 = "Not Answered";
             if (RadioButton1.Checked)
             {
                 ans1 = RadioButton1.Text;
@@ -372,11 +373,11 @@ namespace OnlineExam
             cmd2.ExecuteNonQuery();
             con.Close();
             Response.Redirect("home.aspx");
-            //}
-            //catch (Exception)
-            //{
-            //    Response.Redirect("error.aspx");
-            //}
-       }
+        }
+            catch (Exception)
+            {
+                Response.Redirect("error.aspx");
+            }
+}
     }
 }
