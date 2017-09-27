@@ -125,7 +125,7 @@ namespace OnlineExam
             con.Close();
             dataReader8.Close();
             //q10
-            SqlCommand cmd9 = new SqlCommand("select * from Question where questionID='" + "q10" + "'", con);
+            SqlCommand cmd9 = new SqlCommand("select * from Question where questionID='" + "qlast" + "'", con);
             con.Open();
             SqlDataReader dataReader9 = cmd9.ExecuteReader();
             dataReader9.Read();
@@ -172,7 +172,7 @@ namespace OnlineExam
 
         protected void Button19_Click(object sender, EventArgs e)
         {
-            try { 
+            //try { 
             var ans1 = "Not Answered";
             if (RadioButton1.Checked)
             {
@@ -368,15 +368,15 @@ namespace OnlineExam
                 cmd1.ExecuteNonQuery();
             }
                 SqlCommand cmd2 = new SqlCommand("insert into Test values('" + Session["userid"].ToString() + "','" + Session["user"].ToString() + "','" + ans1 + "','" + ans2 + "','" + ans3 + "','" + ans4 + "','" + ans5 + "','" + ans6 + "','" + ans7 + "','" + ans8 + "','" + ans9 + "','" + ans10 + "')", con);
-           
+            dataReader.Close();
             cmd2.ExecuteNonQuery();
             con.Close();
             Response.Redirect("home.aspx");
-            }
-            catch (Exception)
-            {
-                Response.Redirect("error.aspx");
-            }
+            //}
+            //catch (Exception)
+            //{
+            //    Response.Redirect("error.aspx");
+            //}
        }
     }
 }

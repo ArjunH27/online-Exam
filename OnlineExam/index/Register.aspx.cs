@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
+using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -36,8 +37,8 @@ namespace OnlineExam
                 SqlCommand cmd = new SqlCommand("insert into login values('" + name + "','" + uname + "','" + password + "')", con);
                 cmd.ExecuteNonQuery();
                 Response.Write("<script>alert('Registration Successfull' )</script>");
-                Response.Redirect("login.aspx");
-            }
+                    FormsAuthentication.RedirectToLoginPage();
+                }
             con.Close();
          }catch(Exception)
             {
