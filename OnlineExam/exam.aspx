@@ -10,6 +10,14 @@
                 background-color: #DADADA;
                 border: 1px solid rgba(0,0,0,0.1);
             }
+                   .wrapper1 {	
+	           
+                width: 1255px;
+                padding: 15px 35px 45px;
+                margin: 0 auto;
+                background-color: #beedee;
+                border: 1px solid rgba(0,0,0,0.1);
+            }
     </style>
     <div class="wrapper">
     <asp:MultiView ID="MultiView1" runat="server" ActiveViewIndex="0" >
@@ -158,5 +166,14 @@
         </asp:View>
     </asp:MultiView>
     </div>
-
+    <br /><br />
+    <div class="wrapper1">
+        <h3>Instructions</h3>
+        <p>Exam Consist of 10 Questions</p>
+        <p>Each Question carries 2 mark</p>
+        <p>Total mark for the Exam in 20</p>
+        <p>On clicking Submit Button all answers will be saved</p>
+        <p>You can move back to previous questions </p>
+        <p>Retaking the Exam will remove your old result </p>
+    </div>
 </asp:Content>

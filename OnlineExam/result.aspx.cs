@@ -147,10 +147,10 @@ namespace OnlineExam
                         ans10.BackColor = System.Drawing.Color.Red;
                     }
                     dataReader.Close();
-
+                    int score = j * 2;
                     Label3.Text = Session["user"].ToString();
-                    Label5.Text = j.ToString();
-
+                    Label5.Text = score.ToString();
+                    Label9.Text= j.ToString();
                 }
             else
             {
