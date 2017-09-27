@@ -23,9 +23,9 @@
      }
     </style>
     <div class="wrapper">
-    <asp:Table ID="Table1" runat="server" BorderStyle="Solid" BorderWidth="1"  CellPadding="3" CellSpacing="10" GridLines="Both" Width="976px"  CssClass="tab">
+    <asp:Table ID="Table1" runat="server" BorderStyle="Solid" BorderWidth="1px"  CellPadding="3" CellSpacing="10" GridLines="Both" Width="976px"  CssClass="tab" HorizontalAlign="Justify">
         <asp:TableRow>
-            <asp:TableHeaderCell >Question Number</asp:TableHeaderCell>
+            <asp:TableHeaderCell HorizontalAlign="Center" >Question Number</asp:TableHeaderCell>
             <asp:TableHeaderCell>Your Answer</asp:TableHeaderCell>
             <asp:TableHeaderCell>Correct Answer</asp:TableHeaderCell>
         </asp:TableRow>
@@ -91,21 +91,21 @@
         <br />
         <br />    
     <div class="card">
-      &nbsp;<asp:Label ID="Label2" runat="server" Text="NAME : "></asp:Label>
+      &nbsp;<asp:Label ID="Label2" runat="server" Text="NAME : " Font-Size="Large"></asp:Label>
         &nbsp;&nbsp;
-      <asp:Label ID="Label3" runat="server"></asp:Label>
+      <asp:Label ID="Label3" runat="server" Font-Size="Large"></asp:Label>
         <br />
-&nbsp;<asp:Label ID="Label6" runat="server" Text="TOTAL :"></asp:Label>
+&nbsp;<asp:Label ID="Label6" runat="server" Text="TOTAL :" Font-Size="Large"></asp:Label>
 &nbsp;&nbsp;&nbsp;
-        <asp:Label ID="Label7" runat="server" Text="20"></asp:Label>
+        <asp:Label ID="Label7" runat="server" Text="20" Font-Size="Large"></asp:Label>
         <br />
-&nbsp;<asp:Label ID="Label8" runat="server" Text="CORRECT :"></asp:Label>
+&nbsp;<asp:Label ID="Label8" runat="server" Text="CORRECT :" Font-Size="Large"></asp:Label>
 &nbsp;&nbsp;&nbsp;
-        <asp:Label ID="Label9" runat="server" Text="Label"></asp:Label>
+        <asp:Label ID="Label9" runat="server" Text="Label" Font-Size="Large"></asp:Label>
         <br />
-&nbsp;<asp:Label ID="Label4" runat="server" Text="SCORE : "></asp:Label>
+&nbsp;<asp:Label ID="Label4" runat="server" Text="SCORE : " Font-Size="Large"></asp:Label>
     &nbsp;&nbsp;
-        <asp:Label ID="Label5" runat="server"></asp:Label>
+        <asp:Label ID="Label5" runat="server" Font-Size="Large"></asp:Label>
         <br />
         <br />
     </div>
