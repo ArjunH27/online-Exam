@@ -94,12 +94,14 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\flipclock.css" />
     <Content Include="error.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="result.aspx" />
+    <Content Include="scripts\flipclock.js" />
     <Content Include="scripts\jquery.unobtrusive-ajax.js" />
     <Content Include="scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="index\Web.config" />

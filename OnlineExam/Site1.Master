@@ -36,6 +36,7 @@
   
 </nav>
     <br /><br />
+    
     <div>
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         
@@ -45,4 +46,5 @@
    
 </body>
 <script src="scripts/jquery-1.9.1.js"></script>
+<script src="scripts/flipclock.js"></script>
 </html>

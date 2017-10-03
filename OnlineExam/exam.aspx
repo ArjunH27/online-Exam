@@ -1,6 +1,13 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="exam.aspx.cs" Inherits="OnlineExam.exam" %>
+﻿
+<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="exam.aspx.cs" Inherits="OnlineExam.exam" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    
+    
+
+    <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+    
+
     <style>
                    .wrapper {	
 	           
@@ -18,7 +25,34 @@
                 background-color: #beedee;
                 border: 1px solid rgba(0,0,0,0.1);
             }
+                   .timer{
+                       height:100px;
+                       width:300px;
+                       float:left;
+                   }
     </style>
+ <script src="scripts/jquery-1.9.1.js"></script>
+        <div class="timer" >
+        <link href="Content/flipclock.css" rel="stylesheet" />               
+        <div class="clock" style="margin:2em;"></div>
+      
+         <script >
+		var clock;
+		var flag = 0;
+		$(document).ready(function() {
+		    
+		        clock = $('.clock').FlipClock({
+		            clockFace: 'MinuteCounter'
+		        });
+		    
+
+		});
+		
+	</script>           
+    </div>
+   &nbsp;&nbsp;
+    <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+   <br /><br /><br /><br /><br /><br /><br />
     <div class="wrapper">
     <asp:MultiView ID="MultiView1" runat="server" ActiveViewIndex="0" >
         
@@ -176,4 +210,7 @@
         <p>You can move back to previous questions </p>
         <p>Retaking the Exam will remove your old result </p>
     </div>
+   
+     
+
 </asp:Content>

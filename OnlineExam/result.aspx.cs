@@ -156,7 +156,8 @@ namespace OnlineExam
                 }
             else
             { //if no reult is found for the user
-                Response.Write("<script>alert('NO Results Found' )</script>");        
+                Response.Write("<script>alert('NO Results Found' )</script>");
+                    
             }
 
             }
@@ -168,6 +169,7 @@ namespace OnlineExam
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+            //finish button
             Response.Redirect("home.aspx");
         }
     }
